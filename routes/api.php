@@ -24,5 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('clients', ClientController::class)->except(['destroy']);
 Route::apiResource('clients.dogs', ClientDogController::class)->except(['destroy']);
-Route::apiResource('clients.bookings', ClientBookingController::class)->except(['store', 'update', 'destroy'])->shallow();
+Route::apiResource('clients.bookings', ClientBookingController::class)->except(['update', 'destroy'])->shallow();
 Route::apiResource('bookings', BookingController::class)->only(['index']);
